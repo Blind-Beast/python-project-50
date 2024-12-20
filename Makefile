@@ -13,3 +13,15 @@ package-reinstall:
 gendiff:
 	uv run gendiff
 
+lint:
+	uv run ruff check .
+
+test:
+	uv run pytest
+
+test-coverage:
+	uv run pytest --cov=hexlet_python_package --cov-report xml
+
+check: test lint
+
+.PHONY: install test lint selfcheck check build
