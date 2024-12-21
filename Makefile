@@ -20,7 +20,7 @@ test:
 	uv run pytest
 
 test-coverage:
-	uv run pytest --cov=hexlet_python_package --cov-report xml
+	uv run pytest --cov
 
 check: test lint
 
