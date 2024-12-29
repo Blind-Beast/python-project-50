@@ -7,4 +7,4 @@
 
 [![show-diff](https://github.com/Blind-Beast/python-project-50/actions/workflows/my_workflow.yml/badge.svg)](https://github.com/Blind-Beast/python-project-50/actions/workflows/my_workflow.yml)
 
-[![asciicast](https://asciinema.org/a/IrGcL9xWg58ILpZKdwIU44mpy.svg)](https://asciinema.org/a/IrGcL9xWg58ILpZKdwIU44mpy)
+[![asciicast](https://asciinema.org/a/PFTxCqnYlN5dHUSI7zoVGQ4hz.svg)](https://asciinema.org/a/PFTxCqnYlN5dHUSI7zoVGQ4hz)
