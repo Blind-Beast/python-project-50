@@ -18,10 +18,12 @@ def get_expected_result(filename):
 
 
 @pytest.mark.parametrize('file1_name, file2_name, formatter', [
-    ('file1_in.json', 'file2_in.json', 'stylish'),
-    ('file1_in.yml', 'file2_in.yml', 'stylish'),
-    ('file1_in.json', 'file2_in.json', 'plain'),
-    ('file1_in.yml', 'file2_in.yml', 'plain')
+    ('file1.json', 'file2.json', 'stylish'),
+    ('file1.yml', 'file2.yml', 'stylish'),
+    ('file1.json', 'file2.json', 'plain'),
+    ('file1.yml', 'file2.yml', 'plain'),
+    ('file1.json', 'file2.json', 'json'),
+    ('file1.yml', 'file2.yml', 'json')
 ])
 def test_generate_diff(file1_name, file2_name, formatter):
     expected_result = get_expected_result(f'expected_{formatter}.txt')

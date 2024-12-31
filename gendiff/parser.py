@@ -19,7 +19,7 @@ def parse_arguments():
     return parser.parse_args()
 
 
-def get_file_name(filepath):
+def get_file_extension(filepath):
     _, ext = os.path.splitext(filepath)
     return ext[1:]
 
@@ -37,6 +37,6 @@ def parse_data(data, format):
 
 
 def parse_data_from_file(filepath):
-    format = get_file_name(filepath)
+    format = get_file_extension(filepath)
     content = get_file_content(filepath)
     return parse_data(content, format)
