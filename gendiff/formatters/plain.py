@@ -1,4 +1,5 @@
 def convert_to_str(value):
+    """Convert data to string"""
     if isinstance(value, dict):
         return '[complex value]'
     elif value is None:
@@ -12,6 +13,7 @@ def convert_to_str(value):
 
 
 def format_diff_plain_item(item, path=''):
+    """Format item in plain"""
     current_key = item.get('key')
     current_path = f"{path}.{current_key}" if path else current_key
     tag = item.get('tag')
@@ -37,6 +39,7 @@ def format_diff_plain_item(item, path=''):
 
 
 def format_diff_plain(diff, path=''):
+    """Format difference in plain"""
     lines = []
     for item in diff:
         formatted_item = format_diff_plain_item(item, path)

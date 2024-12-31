@@ -5,6 +5,7 @@ NONE = '  '
 
 
 def convert_to_str(value, spaces_count=2):
+    """Convert data to string"""
     if value is None:
         return 'null'
     if isinstance(value, bool):
@@ -22,6 +23,7 @@ def convert_to_str(value, spaces_count=2):
 
 
 def format_diff_stylish(diff, spaces_count=2):
+    """Format difference in stylish"""
     indent = SPACE * spaces_count
     lines = []
     for item in diff:

@@ -4,6 +4,7 @@ from gendiff.formatters.stylish import format_diff_stylish
 
 
 def format_diff(diff, formatter):
+    """Format difference depending on selected format"""
     if formatter == 'stylish':
         return format_diff_stylish(diff)
     if formatter == 'plain':

@@ -3,6 +3,7 @@ from gendiff.parser import parse_data_from_file
 
 
 def form_added(key, value):
+    """Form structure for added keys"""
     return {
         'tag': 'added',
         'key': key,
@@ -11,6 +12,7 @@ def form_added(key, value):
 
 
 def form_deleted(key, value):
+    """Form structure for deleted keys"""
     return {
         'tag': 'deleted',
         'key': key,
@@ -19,6 +21,7 @@ def form_deleted(key, value):
 
 
 def form_nested(key, value1, value2):
+    """Form structure for nested keys"""
     return {
         'tag': 'nested',
         'key': key,
@@ -27,6 +30,7 @@ def form_nested(key, value1, value2):
 
 
 def form_changed(key, value1, value2):
+    """Form structure for changed keys"""
     return {
         'tag': 'changed',
         'key': key,
@@ -36,6 +40,7 @@ def form_changed(key, value1, value2):
 
 
 def form_unchanged(key, value):
+    """Form structure for unchanged keys"""
     return {
         'tag': 'unchanged',
         'key': key,
@@ -44,6 +49,7 @@ def form_unchanged(key, value):
 
 
 def generate(data1, data2):
+    """Generate difference between two datasets"""
     keys = data1.keys() | data2.keys()
     added = data2.keys() - data1.keys()
     deleted = data1.keys() - data2.keys()
@@ -66,6 +72,8 @@ def generate(data1, data2):
 
 
 def generate_diff(first_file, second_file, formatter='stylish'):
+    """Generate difference between two files 
+    and displays it in the selected format"""
     file1 = parse_data_from_file(first_file)
     file2 = parse_data_from_file(second_file)
     diff = generate(file1, file2)
