@@ -1,9 +1,9 @@
 import json
 
 import pytest
-from test_engine import get_expected_result
 
 from gendiff.parser import parse_data_from_file
+from tests.test_generate_diff import get_expected_result
 
 
 @pytest.fixture
@@ -25,3 +25,8 @@ def expected_result(request):
 def test_parse_data_from_file(input_file_path, expected_result):
     actual_data = parse_data_from_file(input_file_path)
     assert actual_data == json.loads(expected_result)
+
+
+def test_unsupported_format():
+    with pytest.raises(ValueError):
+        parse_data_from_file("tests/test_data/file3.txt")
